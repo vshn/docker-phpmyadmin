@@ -8,5 +8,5 @@ RUN sed -i \
     -e 's/Listen 80/Listen 8080/' \
     -e 's/Listen 443/Listen 4443/' \
     /etc/apache2/ports.conf \
- && chgrp -R 0 /var/run/apache2 \
- && chmod -R g=u /var/run/apache2
+ && chgrp -R 0 /tmp /var/run/apache2 /var/www/html \
+ && chmod -R g=u /tmp /var/run/apache2 /var/www/html
